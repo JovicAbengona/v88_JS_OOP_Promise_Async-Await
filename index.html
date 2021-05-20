@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button:hover{
+                background-color: rgb(87, 87, 253);
+                cursor: pointer;
+            }
+
+            button{
+                background-color: rgb(107, 107, 255);
+                border-radius: 4px;
+                padding: 5px 15px;
+                color: white;
+                border: none;
+            }
+
+            #results{
+                border: 1px solid black;
+                border-radius: 4px;
+                height: 500px;
+                margin-top: 5px;
+                overflow: auto;
+                width: 50vh;
+                padding: 10px;
+            }
+
+            p{
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <title>Village88 JavaScript Track | OOP | Promise and Async/Await</title>
+    </head>
+    <body>
+        <button id="callback">Callback</button>
+        <button id="promise">Promise</button>
+        <button id="asyncAwait">Async/Await</button>
+        <div id="results">
+            
+        </div>
+        <script src="index.js"></script>
+        <script>
+            const buttons = document.querySelectorAll("button");
+
+            buttons.forEach(function(currentBtn){
+                currentBtn.addEventListener("click", function(){
+                    div.innerHTML = "";
+                    if(this.id == "callback")
+                        EmitRandomNumber();
+                    else if(this.id == "promise")
+                        EmitRandomNumberPromise();
+                    else
+                        EmitRandomNumberAsync();
+
+                });
+            });
+        </script>
+    </body>
+</html>
